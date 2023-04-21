@@ -1,5 +1,7 @@
 # Install Flask package
 
-package{'python3-flask':
-  ensure => installed,
+exec { 'install-flask':
+  command => '/usr/bin/pip3 install Flask==2.1.0',
+  path    => ['/usr/bin', '/usr/local/bin'],
 }
+
